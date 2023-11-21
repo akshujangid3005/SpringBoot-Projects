@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th ="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>About-Digital Contact Manger</title>
+</head>
+<body>
+    <section>
+	
+    <div class="card mr-5 ml-5 ">
+		<div class="card-body ">
+			
+			<h1 class="text-center">Add contact</h1>
+			
+			<div class="container-fluid mt-1">
+			
+			<div class="row">
+			<div class="col-md-8 offset-md-2">
+				
+				<form action="#"
+				th:object="${contact}"
+				enctype="multipart/form-data"
+				method="post"
+				th:action="@{/user/process-contact}"
+				class="mt-5 ">
+				
+				
+				<!-- FIRST NAME FIELD IN ADD CONTACT-->
+		
+		    <div class="input-group">	
+					
+			 <div class="input-group-prepend">
+			 <div class="input-group-text">
+				 
+				 <i class="fas fa-user-alt"></i>
+			 </div>
+				 
+			 </div>	
+			 
+			 <input required  type="text" id="firstName" name="name" placeholder="Enter Your Name" class="form-control" />		
+		</div>	
+		
+		
+		<!-- SECOND NICKNAME FIELD IN ADD CONTACT-->
+		
+		    <div class="input-group mt-3">	
+					
+			 <div class="input-group-prepend">
+			 <div class="input-group-text">
+				 
+				 <i class="fa fa-plus"></i>
+			 </div>
+				 
+			 </div>	
+			 
+			 <input required type="text" id="secondName" name="nickname" placeholder="Enter Your NickName" class="form-control" />		
+		</div>	
+		
+		
+		
+		<!-- THIRD PHONENUMBER FIELD IN ADD CONTACT-->
+		
+		    <div class="input-group mt-3">	
+					
+			 <div class="input-group-prepend">
+			 <div class="input-group-text">
+				 
+				 <i class="fa fa-phone"></i>
+			 </div>
+				 
+			 </div>	
+			 
+			 <input  required type="number" id="phone" name="phoneNo" placeholder="Enter Your phoneNo" class="form-control" />		
+		</div>	
+		
+		
+		<!-- FOURTH EMAIL FIELD IN ADD CONTACT-->
+		
+		    <div class="input-group mt-3">	
+					
+			 <div class="input-group-prepend">
+			 <div class="input-group-text">
+				 
+				 <i class="fas fa-user-alt"></i>
+			 </div>
+				 
+			 </div>	
+			 
+			 <input  required type="email" id="email" name="email" placeholder="Enter Your Email" class="form-control" />		
+		</div>	
+		
+			<!--  WORK FIELD IN ADD CONTACT-->
+		
+		    <div class="input-group mt-3">	
+					
+			 <div class="input-group-prepend">
+			 <div class="input-group-text">
+				 
+				 <i class="fa fa-briefcase"></i>
+			 </div>
+				 
+			 </div>	
+			 
+			 <input  required type="text" id="work" name="work" placeholder="Enter Your work" class="form-control" />		
+		</div>
+		
+		
+		  
+		  <!-- 	CONTACT IMAGE FIELD-->
+             
+             <div class="custom-file mt-3">
+				 <input type="file" name="profileImage"/>
+				 
+			 </div>  
+			 
+			 <!-- BUTTON SAVE CONTACT -->  
+			 
+			 <div class="container text-center">
+				 <button class="btn btn-outline-primary">Save Contact</button>
+			 </div>         		
+					
+				</form>
+				
+				
+				
+				
+			      </div>
+			   </div>
+	        </div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
